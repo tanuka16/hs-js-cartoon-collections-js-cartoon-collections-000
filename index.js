@@ -63,4 +63,5 @@ function wordswithB(words){
       wordB.push(words[i]);
     }
   }
+  return wordB;
 }
