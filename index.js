@@ -3,10 +3,16 @@ It should then return a string with the numbered dwarves. The string should look
 "1. Doc 2. Dopey 3. Bashful 4. Grumpy "*/
 function dwarfRollCall(dwarves) {
   var dwarfnames = [];
-  dwarves.forEach(function(names, i) {
+/*  dwarves.forEach(function(names, i) {
     //dwarfnames.push(i+1 + ". " + names )
     dwarfnames += ([i+1]+'. '+ names + " ");
-  });
+  });*/
+  for (let i = dwarves.length/2; i < dwarves.length; i++) { 	
+    dwarfnames += ([i + 1] + ‘. ’ + dwarves[i] + ‘ ‘)
+   }
+
+
+
   //return dwarfnames.join(" ");
   return dwarfnames;
 }
