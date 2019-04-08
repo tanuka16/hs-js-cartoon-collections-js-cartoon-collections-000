@@ -10,7 +10,7 @@ function dwarfRollCall(dwarves) {
   //return dwarfnames.join(" ");
   return dwarfnames;
 }
-
+//dwarfRollCall(["Doc", "Dopey", "Bashful", "Grumpy"]);
 
 /*This function should accept an array of planeteer calls,
 like this: planeteerCalls = ["earth", "wind", "fire", "water", "heart"]
@@ -18,9 +18,9 @@ It should then convert each element to uppercase and add an exclamation point at
 The return value of this method should be an array, in this example:*/
 function summonCaptainPlanet(planeteerCalls){
   var calls = [];
-
+  //go through each array
   planeteerCalls.forEach(function(planeteerCall){
-    calls.push(planeteerCall.toUpperCase() + '!')
+    calls.push(planeteerCall.toUpperCase() + '!')         //push the uppercase strings in the array
   })
   return calls;
 }
@@ -29,7 +29,7 @@ function summonCaptainPlanet(planeteerCalls){
 The function should tell us if any of the calls are longer than four characters.*/
 function longPlaneteerCalls(words) {
   var arr_calls = false;
-
+  //goes through each array
   words.forEach(function(word){
     if (word.length > 4){
       arr_calls = true;
@@ -42,25 +42,16 @@ It should then look through these strings and return the first string that is a 
 The types of cheese that appear are cheddar, gouda, and camembert.
 If, sadly, a list of ingredients does not include cheese, return "no cheese!":
 */
-function findTheCheese (foods) {
+function findTheCheese (foods){
   var cheese = ["camembert", "cheddar", "gouda"];
-  for (var i = 0; i < foods.length; i++){             //iteration
-    for (var j=0; j < cheese.length; j++){            //the first element of the array that is cheese
-      if(foods[i] == cheese[j]){
-        return cheese[j];
-      }
-    }
-  }
-  return "no cheese!"                          //if the array does not contain a type of cheese
-}
-
-/*function findTheCheese (foods){
-  var cheese = ["camembert", "cheddar", "gouda"];
+  //iterate
 	for(var i = 0; i < foods.length; i++) {
-		var cheeseIdx = cheese.indexOf(foods[i]);
-		if(cheeseIdx !== -1) {
+  ////the first element of the array that is cheese
+		var cheeseInd = cheese.indexOf(foods[i]);
+    //-1 if its not included
+		if(cheeseI !== -1) {
 			return foods[i];
 		}
 	}
-	return "no cheese!";
-}*/
+	return "no cheese!";                                   //if the array does not contain a type of cheese
+}
